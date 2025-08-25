@@ -1,6 +1,6 @@
 # RHT-models
 
-This repository contains the code developed and used in my Master’s thesis:
+This repository contains the code developed and used in Master’s thesis:
 “A numerical investigation of radiative heat transfer in methane and hydrogen opposed-flow diffusion flames with varying oxidizer composition.”
 
 LBL Repository: Line-by-Line (LBL) radiation model implementation.
