@@ -17,7 +17,7 @@ def compute_radiative_heat_transfer_rte(file_path,
                                         temperature_col="Temperature (K)",
                                         fv_col="Particle_volume_fraction (cm3/cm3)",
                                         molecules=['OH', "H2O", 'CO', 'CO2'],
-                                        spectral_range=(300, 10000),
+                                        spectral_range=(300, 6000),
                                         database='hitemp',
                                         C_eta=1182,
                                         C_par=7.0,
@@ -76,4 +76,5 @@ def compute_radiative_heat_transfer_rte(file_path,
     return df, x_vals, np.array(emissivity_list)
 
 if __name__ == "__main__":
+
     df, x_vals, emissivity_array = compute_radiative_heat_transfer_rte(file_path=r'C:\Users\ariad\OneDrive\Documentos\MATLAB\H2_1atm\excelCO2\H2_1atm_40_O2_60_CO2.xlsx')
