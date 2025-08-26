@@ -1,3 +1,9 @@
+%=========================================================================================
+% Created on Tue Aug 26 16:09:24 2025
+%
+% @author: ariad
+%=========================================================================================
+
 folders = {
     'C:\Users\ariad\OneDrive\Documentos\MATLAB\CH4_1atm\CO2', ...
     'C:\Users\ariad\OneDrive\Documentos\MATLAB\CH4_1atm\N2', ...
@@ -132,3 +138,4 @@ for folder_idx = 1:length(folders)
     end
     
 end
+
