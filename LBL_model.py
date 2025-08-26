@@ -8,9 +8,7 @@ Compute emissivity profile of a single file with the LBL model
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from radis import calc_spectrum
-from radis.phys.blackbody import planck_wn
 from scipy.constants import pi, sigma as Sigma  #Stefan-Boltzmann constant
 
 def compute_radiative_heat_transfer_rte(file_path,
@@ -79,4 +77,3 @@ def compute_radiative_heat_transfer_rte(file_path,
 
 if __name__ == "__main__":
     df, x_vals, emissivity_array = compute_radiative_heat_transfer_rte(file_path=r'C:\Users\ariad\OneDrive\Documentos\MATLAB\H2_1atm\excelCO2\H2_1atm_40_O2_60_CO2.xlsx')
-
