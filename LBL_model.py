@@ -19,8 +19,7 @@ def compute_radiative_heat_transfer_rte(file_path,
                                         molecules=['OH', "H2O", 'CO', 'CO2'],
                                         spectral_range=(300, 6000),
                                         database='hitemp',
-                                        C_eta=1182,
-                                        C_par=7.0,
+                                        C_par=1182,
                                         path_length=1.0):   # cm
     
     df = pd.read_excel(file_path, sheet_name=sheet_name)
@@ -65,11 +64,11 @@ def compute_radiative_heat_transfer_rte(file_path,
 
         emissivity_gas = (I_L_total * pi) / (Sigma * T**4)
 
-        k_soot = C_par * f_v * T
-        emissivity_soot = 1 - np.exp(-k_soot * path_length*0.01)
+#        k_soot = C_par * f_v * T
+#        emissivity_soot = 1 - np.exp(-k_soot * path_length*0.01)
       
-        emissivity_total = emissivity_gas + emissivity_soot
-        emissivity_list.append(emissivity_total)
+#        emissivity_total = emissivity_gas + emissivity_soot
+        emissivity_list.append(emissivity_gas)
         
     df["Emissivity (-)"] = emissivity_list
 
@@ -78,3 +77,4 @@ def compute_radiative_heat_transfer_rte(file_path,
 if __name__ == "__main__":
 
     df, x_vals, emissivity_array = compute_radiative_heat_transfer_rte(file_path=r'C:\Users\ariad\OneDrive\Documentos\MATLAB\H2_1atm\excelCO2\H2_1atm_40_O2_60_CO2.xlsx')
+
